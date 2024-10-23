@@ -46,4 +46,4 @@ jobs:
         run: |-
           ./cloud-sql-proxy ${{ secrets.GCP_PROJECT }}:${{ secrets.GCP_LOCATION }}:${{ secrets.SQL_INSTANCE }} &
           sleep 5
-          PGPASSWORD=${{ secrets.SQL_PASSWORD }} ./psqldef --dry-run -h localhost -p 5432 -U ${{ secrets.SQL_USER }} pokemon_vg < ./ddl/pokemon_vg/*
+          PGPASSWORD=${{ secrets.SQL_PASSWORD }} ./psqldef -h localhost -p 5432 -U ${{ secrets.SQL_USER }} pokemon_vg --dry-run < ./ddl/pokemon_vg/*
