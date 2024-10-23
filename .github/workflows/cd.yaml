@@ -49,4 +49,4 @@ jobs:
       # Run psqldef
       - name: Run psqldef
         run: |-
-          PGPASSWORD=${{ secrets.SQL_PASSWORD }} ./psqldef -h localhost -p 5432 -U ${{ secrets.SQL_USER }} pokemon_vg < ./ddl/pokemon_vg/*
+          ./psqldef -h localhost -p 5432 -U ${{ secrets.SQL_USER }} -W ${{ secrets.SQL_PASSWORD }} pokemon_vg < ./ddl/pokemon_vg/*
