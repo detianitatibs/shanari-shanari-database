@@ -52,4 +52,4 @@ jobs:
       # Dry Run psqldef
       - name: Dry Run psqldef
         run: |-
-          ./psqldef --dry-run -h localhost -p 5432 -U ${{ secrets.SQL_USER }} -W ${{ secrets.SQL_PASSWORD }} pokemon_vg < ./ddl/pokemon_vg/*
+          ./psqldef --dry-run -h localhost -p 5432 -U ${{ secrets.SQL_USER }} -W ${{ secrets.SQL_PASSWORD }} pokemon_vg < ddl/pokemon_vg/*
