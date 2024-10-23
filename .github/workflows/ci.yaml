@@ -33,15 +33,15 @@ jobs:
       # Install psqldef
       - name: Install psqldef
         run: |-
-          curl -LO https://github.com/sqldef/sqldef/releases/download/v0.17.21/psqldef_darwin_amd64.zip
-          unzip psqldef_darwin_amd64.zip
-          rm -rf psqldef_darwin_amd64.zip
+          curl -LO https://github.com/sqldef/sqldef/releases/download/v0.17.21/psqldef_linux_amd64.tar.gz
+          tar -zxvf psqldef_linux_amd64.tar.gz
+          rm -rf psqldef_linux_amd64.tar.gz
           ./psqldef --version
 
       # Install Cloud SQL Auth Proxy
       - name: Install Cloud SQL Auth Proxy
         run: |-
-          curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.13.0/cloud-sql-proxy.darwin.arm64
+          curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.13.0/cloud-sql-proxy.linux.amd64
           chmod +x ./cloud-sql-proxy
 
       # Launch Cloud SQL Auth Proxy and Dry Run psqldef
