@@ -49,4 +49,4 @@ jobs:
       # Run psqldef
       - name: Run psqldef
         run: |-
-          for i in $(ls ddl/pokemon_vg); do ./psqldef -h localhost -p 5432 -U ${{ secrets.SQL_USER }} -W ${{ secrets.SQL_PASSWORD }} -f ddl/pokemon_vg/${i} postgres; done
+          ./psqldef -h localhost -p 5432 -U ${{ secrets.SQL_USER }} -W ${{ secrets.SQL_PASSWORD }} -f ddl/pokemon_vg.sql pokemon_vg
