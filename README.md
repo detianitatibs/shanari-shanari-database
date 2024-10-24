@@ -30,7 +30,7 @@ v0.17.21
 - コマンドの実行
 
 ```
-$ PGPASSWORD=postgres psqldef -h localhost -p 5432 -U postgres postgres < ddl/pokemon_vg/*
+$ for i in $(ls ddl/pokemon_vg); do psqldef --dry-run -h localhost -p 5432 -U postgres -W postgres -f ddl/pokemon_vg/${i} postgres; done
 ```
 
 docker コンテナで正しく作成されているかを確認する
