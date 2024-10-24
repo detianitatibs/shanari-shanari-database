@@ -1,4 +1,4 @@
-name: Dry Run DDL
+name: Run DDL
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   dry-run:
-    name: Dry Run DDL
+    name: Run DDL
     runs-on: ubuntu-latest
     environment: GCP
 

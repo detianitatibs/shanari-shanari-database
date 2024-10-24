@@ -21,7 +21,7 @@ CREATE TABLE pokemon_moves (
     move_learn_method text,
     level_learned_at integer,
     version_group text,
-    PRIMARY KEY (pokemon_id)
+    PRIMARY KEY (pokemon_id, move_name, move_learn_method, version_group)
 );
 
 CREATE TABLE pokemon_sprites (
