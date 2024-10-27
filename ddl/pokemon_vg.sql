@@ -37,6 +37,12 @@ CREATE TABLE pokemon_sprites (
     PRIMARY KEY (pokemon_id)
 );
 
+CREATE TABLE pokemon_forms (
+    pokemon_id integer,
+    form_id integer,
+    PRIMARY KEY (pokemon_id, form_id)
+)
+
 CREATE TABLE ability (
     ability_id integer,
     ability_name_en text,
